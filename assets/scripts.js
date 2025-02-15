@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const quoteElement = document.getElementById('quote');
 
     function fetchQuote() {
-        fetch('https://api.quotable.io/random')
+        fetch('http://api.quotable.io/random')
             .then(response => response.json())
             .then(data => {
                 quoteElement.textContent = `"${data.content}" - ${data.author}`;
