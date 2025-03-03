@@ -8,6 +8,8 @@ body {
     margin: auto;
 }
 
+/* Header */
+
 header {
     background: linear-gradient(to right, #4a148c, #7b1fa2);
     color: #fff;
@@ -117,18 +119,19 @@ input:checked + .slider:before {
     transform: translateX(14px);
 }
 
+/* Body */
+
 body.dark-mode {
     background-color: #181818;
     color: #f0f0f0;
 }
 
-body.dark-mode header, body.dark-mode footer {
-    background: #222;
-    color: #fff;
+body.dark-mode .nav-links li a {
+    color: #f0f0f0;
 }
 
-body.dark-mode .nav-links li a {
-    color: #ddd;
+body.dark-mode .card h2{
+    color: #f0f0f0;
 }
 
 body.dark-mode section {
@@ -300,7 +303,8 @@ body.dark-mode .nav-links li a:hover {
     padding: 40px;
     text-align: center;
     background: linear-gradient(to bottom right, #f0e130, #7b2cbf);
-    color: #333;
+    color: #181818;
+    font-style: italic;
     border-radius: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     max-width: 800px;
@@ -316,25 +320,30 @@ body.dark-mode .nav-links li a:hover {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-#quote-section blockquote {
-    font-size: 1.5em;
-    line-height: 1.6;
-    font-style: italic;
-    margin: 0 auto;
-    padding: 20px;
-    background: #ffffff;
-    border-left: 5px solid #f0e130;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    display: inline-block;
-    max-width: 80%;
-    transition: transform 0.3s, background 0.3s;
+#cards{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    width: 100%;
+    height: 100%;
 }
 
-#quote-section blockquote:hover {
-    transform: scale(1.02);
-    background: #f9fafb;
-    border-left: 5px solid #7b2cbf;
+.card{
+    margin: auto;
+    border: 3px solid transparent;
+    border-radius: 10%;
+    padding: 1vw;
+}
+
+.card a img{
+    width: 100%;
+    height: 45%;
+}
+
+.card a img:hover{
+    scale: 1.05;
 }
 
 #contact {
@@ -365,11 +374,14 @@ body.dark-mode .nav-links li a:hover {
     opacity: 0.8;
 }
 
+/* Footer */
+
 #footer {
     background: rebeccapurple;
     color: #fff;
     padding: 1.3em 0;
     text-align: center;
+    width: 100%;
 }
 
 .footer-content a:hover {

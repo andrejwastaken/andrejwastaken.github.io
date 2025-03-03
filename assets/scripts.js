@@ -31,28 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    const quoteElement = document.getElementById('quote');
-
-    function fetchQuote() {
-        fetch('http://api.quotable.io/random')
-            .then(response => response.json())
-            .then(data => {
-                quoteElement.textContent = `"${data.content}" - ${data.author}`;
-            })
-            .catch(error => {
-                console.error('Error fetching quote:', error);
-            });
-    }
-
-    function fetchDailyQuote() {
-        fetchQuote();
-        setInterval(fetchQuote, 86400000);
-    }
-
-    fetchDailyQuote();
-});
-
-document.addEventListener('DOMContentLoaded', function() {
     const today = new Date();
     const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const dayIndex = today.getDay();
