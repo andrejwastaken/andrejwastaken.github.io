@@ -286,13 +286,6 @@ body.dark-mode .nav-links li a:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.work-in-progress::before {
-    content: "\1F6A7";
-    display: block;
-    font-size: 40px;
-    margin-bottom: 10px;
-}
-
 #quote-section{
     display: flex;
     flex-direction: column;
